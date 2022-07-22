@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixel Art Maker"/>
+    <meta charset="utf-8">
+
+    <title>Pixel Art</title>
+    <link href="images/aesthetic-street.JPG" rel="shortcut icon" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="css/loader.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Poppins:regular,700,600", "Lora:regular,500,600,700,800"]
+        }
+      });
+    </script>
+
+    <script src="./js/scripts.js" defer></script>
+
+  </
+  >
+
+  <body>
+
+  <!--Pre-loader-->
+  <div class="loading" style="display: flex; z-index: 2;">
+    <span class="loader"></span>
+  </div>
+
+    <header>
+      <div id="Navbar" class="navbar">
+        <a href="#" class="logo-link-block"><img src="images/aesthetic-street.JPG" loading="lazy" alt="" class="logo"><span class="name">Pixel Art Maker</span>
+          <div class="link-text"></div>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <!-- Side menu -->
+        <div class="grid-size-wrapper">
+          <input
+            type="range"
+            min="10"
+            max="100"
+            value="30"
+            step="5"
+            name="CanvasSize"
+            id="CanvasSize"
+          />
+          <label id="sliderLabel" for="CanvasSize">Grid size: 30 x 30</label>
+        </div>
+        <div>
+          <div class="color-select">
+            <div class="input-color-wrapper">
+              <input
+                type="color"
+                name="penColor"
+                id="penColor"
+                value="#202020"
+              />
+            </div>
+            <label for="penColor">Color<i class="fa-solid fa-eye-dropper" style="margin-left: 0.5rem"></i></label>
+          </div>
+          <div class="color-select">
+            <div class="input-color-wrapper">
+              <input
+                type="color"
+                name="backgroundColor"
+                id="backgroundColor"
+                value="#f5f5f5"
+              />
+            </div>
+            <label for="backgroundColor">Background<i class="fa-solid fa-paint-roller" style="margin-left: 0.5rem"></i></label>
+          </div>
+        </div>
+        <div id="BrushType">
+          <button id="modePen" class="btn-active">Paint<i class="fa-solid fa-brush" style="margin-left: 10px"></i></button>
+          <button id="modeEraser">Eraser<i class="fa-solid fa-eraser" style="margin-left: 10px"></i></button>
+        </div>
+        <button id="newCanvas">Clear Canvas<i class="fa-solid fa-broom" style="margin-left: 10px"></i></button>
+      </aside>
+
+      <section>
+        <div id="canvas" style="background-color: rgb(255, 255, 255)"></div>
+      </section>
+    </main>
+
+  <div class="footer">
+
+    <a href="https://lukekeely.github.io" class="logo-link-block">
+      <div class="link-text">©lukekeely2077
+      </div>
+
+    </a>
+
+    <div class="first-links">
+
+      <div class="social-links">
+
+        <div class="card-link"><a href="https://lukekeely.github.io"><i class="fa-solid fa-globe card-icon"></i></a></div>
+        <div class="card-link"><a href="mailto:luke.keely@outlook.com"><i class="fa-solid fa-envelope card-icon"></i></a></div>
+        <div class="card-link"><a href="https://github.com/lukekeely"><i class="fa-brands fa-github card-icon"></i></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    window.onload = () => document.querySelector('.loading').style.display = "none"
+  </script>
+  </body>
+</html>
