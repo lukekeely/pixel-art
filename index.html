@@ -22,9 +22,9 @@
     </script>
 
     <script src="./js/scripts.js" defer></script>
+    <script src="js/html2canvas.js"></script>
 
-  </
-  >
+  </head>
 
   <body>
 
@@ -89,6 +89,7 @@
 
       <section>
         <div id="canvas" style="background-color: rgb(255, 255, 255)"></div>
+        <button id="Export" class="button-inv" onclick="download()">Download<i class="fa-solid fa-floppy-disk" style="margin-left: 10px"></i></button>
       </section>
     </main>
 
@@ -115,5 +116,19 @@
   <script type="text/javascript">
     window.onload = () => document.querySelector('.loading').style.display = "none"
   </script>
+
+  <script>function download() {
+    const container = document.getElementById("canvas"); //specific element on page
+    html2canvas(container).then(function(canvas) {
+      let link = document.createElement("a");
+      document.body.appendChild(link);
+      link.download = "html_image.png";
+      link.href = canvas.toDataURL("image/png");
+      link.target = '_blank';
+      link.click();
+    });
+  }
+  </script>
+
   </body>
 </html>

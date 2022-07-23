@@ -16,13 +16,13 @@
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
@@ -97,6 +97,32 @@ button {
 }
 button:hover {
   background-color: var(--mainColor);
+  color: var(--secondaryColor);
+}
+
+.button-inv {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  border: 2px solid var(--mainColor);
+  margin: 1.5rem 0;
+  border-radius: 0.25rem;
+  background-color: var(--mainColor);
+  cursor: pointer;
+  color: var(--secondaryColor);
+}
+.button-inv:hover {
+  background: none;
+  color: var(--mainColor);
+}
+.button-inv:active {
+  background: #694848;
+  border: 2px solid #694848;
+  color: var(--secondaryColor);
+}
+button:active {
+  background: #694848;
+  border: 2px solid #694848;
   color: var(--secondaryColor);
 }
 .btn-active {
